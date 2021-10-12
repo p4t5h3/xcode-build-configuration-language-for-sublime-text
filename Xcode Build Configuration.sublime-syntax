@@ -1,0 +1,61 @@
+%YAML 1.2
+---
+file_extensions:
+  - xcconfig
+scope: source.xcconfig
+contexts:
+  main:
+    - match: \'
+      scope: punctuation.definition.string.begin.xcconfig
+      push: single_quoted_string
+
+    - match: '"'
+      scope: punctuation.definition.string.begin.xcconfig
+      push: double_quoted_string
+
+    - match: '\$[({]'
+      scope: punctuation.definition.interpolation.begin.xcconfig
+      push: interpolation
+
+    - match: '^[\w_]+\b'
+      scope: variable.xcconfig
+
+    - match: '='
+      scope: keyword.operator.assignment.xcconfig
+
+    - match: //.*
+      scope: comment.line.double-shash.xcconfig
+
+    - match: ^\s*\#\w+\b
+      scope: keyword.control.xcconfig
+  
+  single_quoted_string:
+    - meta_scope: string.quoted.single.xcconfig
+
+    - match: \'
+      scope: punctuation.definition.string.end.xcconfig
+      pop: true
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.xcconfig
+
+    - match: '\\.'
+      scope: constant.character.escape.xcconfig
+
+    - match: '"'
+      scope: punctuation.definition.string.end.xcconfig
+      pop: true
+
+  interpolation:
+    - meta_scope: string.interpolated
+
+    - match: '([\w_\.]+)(:default)?(=)?([^)}]*)?'
+      captures:
+        1: variable.xcconfig
+        2: keyword.other.xcconfig
+        3: keyword.operator.assignment.xcconfig
+        4: variable.xcconfig
+
+    - match: '[)}]'
+      scope: punctuation.definition.interpolation.end.xcconfig
+      pop: true
