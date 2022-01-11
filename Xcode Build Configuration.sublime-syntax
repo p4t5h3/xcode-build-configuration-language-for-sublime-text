@@ -24,7 +24,7 @@ contexts:
       scope: keyword.operator.assignment.xcconfig
 
     - match: //.*
-      scope: comment.line.double-shash.xcconfig
+      scope: comment.line.double-slash.xcconfig
 
     - match: ^\s*\#\w+\b
       scope: keyword.control.xcconfig
