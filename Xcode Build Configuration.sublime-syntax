@@ -3,6 +3,7 @@
 file_extensions:
   - xcconfig
 scope: source.xcconfig
+version: 2
 contexts:
   main:
     - match: \'
@@ -28,7 +29,7 @@ contexts:
 
     - match: ^\s*\#\w+\b
       scope: keyword.control.xcconfig
-  
+
   single_quoted_string:
     - meta_scope: string.quoted.single.xcconfig
 
