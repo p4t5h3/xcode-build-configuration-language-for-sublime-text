@@ -1,11 +1,21 @@
-# Xcode build configuration syntax definition for Sublime Text
+# Xcode Build Configuration Syntax for Sublime Text
 
-Syntax highlighting support of Xcode build configuration files (*.xcbuild) for Sublime Text. Created out of a personal need and to refresh my experience in creating Sublime Text Packages.
+Syntax highlighting support of [Xcode build configuration settings files](https://help.apple.com/xcode/mac/current/#/dev745c5c974) (*.xcconfig) for Sublime Text.
 
-## Package Control
+## Installation
 
-This package is not yet listed on Package Control.
+### Package Control
+
+This is not yet available on [Package Control](https://packagecontrol.io/) at the time of writing.
+
+### Manual
+
+Otherwise it can be installed manually by cloning the repository in [your package directory of Sublime Text](https://www.sublimetext.com/docs/packages.html#locations).
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-See [LICENSE](LICENSE) file.
+Please see [LICENSE.md](LICENSE.md).
