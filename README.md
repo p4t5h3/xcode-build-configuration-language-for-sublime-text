@@ -1,6 +1,6 @@
-# Xcode Build Configuration Syntax for Sublime Text
+# Xcode Configuration Settings Syntax for Sublime Text
 
-Syntax highlighting support of [Xcode build configuration settings files](https://help.apple.com/xcode/mac/current/#/dev745c5c974) (*.xcconfig) for Sublime Text.
+Syntax highlighting support of Xcode's [configuration settings files](https://help.apple.com/xcode/mac/current/#/dev745c5c974) (*.xcconfig) for Sublime Text.
 
 ## Installation
 
